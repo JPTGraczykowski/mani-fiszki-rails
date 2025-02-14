@@ -29,11 +29,15 @@
       </div>
     </header>
 
-    <main class="flex flex-1 overflow-auto bg-gray-100 py-5">
-      <div class="mx-auto">
+    <div class="flex flex-1">
+      <aside class="border-r-1 hidden w-64 border-gray-300 px-5 py-5 sm:block">
+        Aside
+      </aside>
+
+      <main class="flex-1 overflow-auto bg-gray-100 px-5 py-5">
         <%= yield %>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <footer class="border-t-1 sticky bottom-0 block h-8 border-gray-300 py-1 text-center">
       ©2025 Jędrzej Graczykowski
