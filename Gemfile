@@ -66,3 +66,4 @@ group :test do
 end
 
 gem "view_component"
+gem "acts_as_list"

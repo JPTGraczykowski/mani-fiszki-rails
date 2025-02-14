@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flashcard_set: numbers
+  english_name: One
+  polish_name: Jeden
+  position: 1
+
+two:
+  flashcard_set: numbers
+  english_name: Two
+  polish_name: Dwa
+  position: 2
+
+hello:
+  flashcard_set: greetings
+  english_name: Hello
+  polish_name: Czesc
+  position: 1
+
+bye:
+  flashcard_set: greetings
+  english_name: Bye
+  polish_name: Pa
+  position: 2

@@ -1,6 +1,10 @@
 require "test_helper"
 
 class FlashcardSetTest < ActiveSupport::TestCase
+  test "should have many flashcards" do
+    assert_equal :has_many, FlashcardSet.reflect_on_association(:flashcards).macro
+  end
+
   test "should validate presence of English and Polish name" do
     flashcard_set = FlashcardSet.new
     assert_not flashcard_set.valid?
