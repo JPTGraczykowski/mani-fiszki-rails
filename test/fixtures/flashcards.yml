@@ -23,3 +23,40 @@ bye:
   english_name: Bye
   polish_name: Pa
   position: 2
+
+
+dog:
+  flashcard_set: animals
+  english_name: Dog
+  polish_name: Pies
+  position: 1
+
+cat:
+  flashcard_set: animals
+  english_name: Cat
+  polish_name: Kot
+  position: 2
+
+horse:
+  flashcard_set: animals
+  english_name: Horse
+  polish_name: Kon
+  position: 3
+
+monday:
+  flashcard_set: weekdays
+  english_name: Monday
+  polish_name: Poniedzialek
+  position: 1
+
+tuesday:
+  flashcard_set: weekdays
+  english_name: Tuesday
+  polish_name: Wtorek
+  position: 2
+
+wednesday:
+  flashcard_set: weekdays
+  english_name: Wednesday
+  polish_name: Sroda
+  position: 3

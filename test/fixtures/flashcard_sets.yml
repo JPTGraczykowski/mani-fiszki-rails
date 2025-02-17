@@ -8,3 +8,11 @@ greetings:
   english_name: Greetings
   polish_name: Pozdrowienia
 
+animals:
+  english_name: Animals
+  polish_name: Zwierzeta
+
+weekdays:
+  english_name: Weekdays
+  polish_name: Dni Tygodnia
+
