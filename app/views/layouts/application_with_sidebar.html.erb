@@ -22,10 +22,8 @@
   <body class="flex h-screen flex-col font-roboto">
     <%= render "layouts/header" %>
 
-    <div class="flex flex-1 bg-white">
-      <aside class="border-r-1 hidden w-64 border-gray-300 px-5 py-5 sm:block">
-        Aside
-      </aside>
+    <div class="flex flex-1">
+      <%= render "layouts/sidebar" %>
 
       <main class="flex-1 overflow-auto bg-gray-100 px-5 py-5">
         <%= yield %>
