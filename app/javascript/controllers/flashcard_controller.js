@@ -5,16 +5,16 @@ export default class extends Controller {
   static values = {
     englishName: String,
     polishName: String,
-    state: String
+    language: String
   }
 
   toggle() {
-    if (this.stateValue === "english") {
+    if (this.languageValue === "english") {
       this.textTarget.innerText = this.polishNameValue;
-      this.stateValue = "polish";
+      this.languageValue = "polish";
     } else {
       this.textTarget.innerText = this.englishNameValue;
-      this.stateValue = "english";
+      this.languageValue = "english";
     }
   }
 }
