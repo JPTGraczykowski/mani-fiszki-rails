@@ -8,6 +8,8 @@ class FlashcardSetsController < ApplicationController
 
   def show
     @flashcards = @flashcard_set.flashcards
+    @current_index = params[:index].to_i || 0
+    @current_flashcard = @flashcards[@current_index]
   end
 
   private

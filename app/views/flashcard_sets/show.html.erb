@@ -1,4 +1,7 @@
-<%= @flashcards.find_each do |flashcard| %>
-  <%= flashcard.english_name %>
-  <%= flashcard.polish_name %>
-<% end %>
+<div class="mx-auto flex h-1/2 flex-col items-center sm:h-3/4">
+  <div class="mb-1 flex w-full items-center justify-between px-1 md:w-3/4">
+    <%= link_to "< Wróć", root_path, class: "text-xl hover:cursor-pointer hover:opacity-50" %>
+  </div>
+  <%= render "flashcard" %>
+  <%= render "navigation" %>
+</div>
