@@ -1,3 +1,12 @@
-  <div class="min-w-44 mb-3 flex h-full w-full items-center justify-center rounded-lg border border-gray-300 bg-white text-5xl hover:cursor-pointer hover:opacity-50 md:w-3/4">
-    <%= @current_flashcard.english_name %>
+  <div
+    data-controller="flashcard"
+    data-action="click->flashcard#toggle"
+    data-flashcard-english-name-value="<%= @current_flashcard.english_name %>"
+    data-flashcard-polish-name-value="<%= @current_flashcard.polish_name %>"
+    data-flashcard-state-value="english"
+    class="min-w-44 mb-3 flex h-full w-full items-center justify-center rounded-lg border border-gray-300 bg-white text-5xl hover:cursor-pointer hover:opacity-70 md:w-3/4"
+  >
+    <span data-flashcard-target="text">
+      <%= @current_flashcard.english_name %>
+    </span>
   </div>  

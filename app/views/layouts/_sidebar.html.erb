@@ -3,7 +3,7 @@
     <% active_set = flashcard_set == @flashcard_set %>
 
     <%= link_to flashcard_set do %>
-      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-white hover:cursor-pointer hover:opacity-50 <%= active_set ? "border-gray-600 font-medium" : ""%>">
+      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-white hover:cursor-pointer hover:opacity-70 <%= active_set ? "border-gray-600 font-medium" : ""%>">
         <%= flashcard_set.english_name %>
         (<%= flashcard_set.polish_name %>)
       </div>

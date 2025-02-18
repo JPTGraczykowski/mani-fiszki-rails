@@ -1,5 +1,5 @@
 <div class="min-w-44 flex w-3/4 items-center justify-center">
-  <% nav_link_class = "flex h-8 w-16 items-center justify-center rounded-lg border border-gray-300 bg-white hover:cursor-pointer hover:opacity-50" %>
+  <% nav_link_class = "flex h-8 w-16 items-center justify-center rounded-lg border border-gray-300 bg-white hover:cursor-pointer hover:opacity-70" %>
   <% if @current_index > 0 %>
     <%= link_to "<", flashcard_set_path(@flashcard_set, index: @current_index - 1), class: nav_link_class %>
   <% else %>
