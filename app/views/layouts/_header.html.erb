@@ -4,7 +4,7 @@
   </a>
   <% if authenticated? %>
     <div class="flex">
-      <%= link_to "Zarządzaj", root_path, class: "sm:text-lg hover:opacity-70 mr-2" %>
+      <%= link_to "Zarządzaj", admin_flashcard_sets_path, class: "sm:text-lg hover:opacity-70 mr-2" %>
       <div class="mr-2">|</div>
       <%= button_to "Wyloguj", session_path, method: :delete, class: "sm:text-lg hover:cursor-pointer hover:opacity-70" %>
     </div>

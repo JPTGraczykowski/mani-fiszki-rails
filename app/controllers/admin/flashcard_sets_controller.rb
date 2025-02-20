@@ -1,7 +1,7 @@
 class Admin::FlashcardSetsController < Admin::BaseController
   before_action :set_flashcard_set, only: [:edit, :show, :update, :destroy]
   def index
-    @flashcard_sets = FlashcardSet.all
+    @flashcard_sets = FlashcardSet.all.includes(:flashcards)
   end
 
   def new

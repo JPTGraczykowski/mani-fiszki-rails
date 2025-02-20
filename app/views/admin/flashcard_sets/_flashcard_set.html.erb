@@ -1,0 +1,16 @@
+<div class="min-h-32 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 text-lg">
+  <div class="flex flex-col items-center text-sm">
+    <div class="mb-3 flex text-lg">
+      <%= link_to "Edytuj",
+                  flashcard_set,
+                  class: "text-blue-600 mr-5 hover:opacity-70" %>
+      <%= button_to "Usuń",
+                    admin_flashcard_set_path(flashcard_set),
+                    method: :delete,
+                    class: "text-red-600 hover:cursor-pointer hover:opacity-70" %>
+    </div>
+    <div><%= flashcard_set.english_name %></div>
+    <div>(<%= flashcard_set.polish_name %>)</div>
+    <%= "Ilość fiszek: #{flashcard_set.flashcards.size}" %>
+  </div>
+</div>
