@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   root "flashcard_sets#index"
 
-  resources :flashcard_sets, only: [:index, :show]
+  resources :flashcard_sets, only: [:index, :show] do
+    resources :flashcards, only: [:index] do
+      get "hide_flashcards", on: :collection
+    end
+  end
 end

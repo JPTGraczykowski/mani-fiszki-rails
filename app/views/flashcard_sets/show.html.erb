@@ -1,10 +1,12 @@
-<div class="h-5/8 mx-auto flex flex-col items-center sm:h-3/4">
-  <div class="mb-2 flex w-full flex-col items-center justify-between px-1 sm:flex-row md:w-3/4">
-    <%= link_to "< Wróć", root_path, class: "text-lg hover:cursor-pointer hover:opacity-70 min-w-18 mb-3 sm:mb-0 border border-gray-300 bg-lime-200 rounded-lg px-1" %>
-    <div class="w-full text-center text-xl"><%= "#{@flashcard_set.english_name} (#{@flashcard_set.polish_name})" %></div>
-    <%= render "preferred_language_toggle" %>
+<%= turbo_frame_tag "flashcard_set" do %>
+  <div class="h-5/8 mx-auto flex flex-col items-center sm:h-3/4">
+    <div class="mb-2 flex w-full flex-col items-center justify-between px-1 sm:flex-row md:w-3/4">
+      <%= link_to "< Wróć", root_path, class: "text-lg hover:cursor-pointer hover:opacity-70 min-w-18 mb-3 sm:mb-0 border border-gray-300 bg-lime-200 rounded-lg px-1", data: { turbo_frame: "_top" } %>
+      <div class="w-full text-center text-xl"><%= "#{@flashcard_set.english_name} (#{@flashcard_set.polish_name})" %></div>
+      <%= render "preferred_language_toggle" %>
+    </div>
+    <%= render "flashcard" %>
+    <%= render "navigation" %>
   </div>
-  <%= render "flashcard" %>
-  <%= render "navigation" %>
-</div>
-<%= render "flashcards_list" %>
+<% end %>
+<%= render "show_flashcards_link" %>
