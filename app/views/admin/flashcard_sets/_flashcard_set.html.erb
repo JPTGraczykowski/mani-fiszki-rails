@@ -7,6 +7,7 @@
       <%= button_to "Usuń",
                     admin_flashcard_set_path(flashcard_set),
                     method: :delete,
+                    form: { data: { turbo_confirm: 'Czy na pewno chcesz usunąć zestaw wraz z wszystkimi fiszkami?' } },
                     class: "text-red-600 hover:cursor-pointer hover:opacity-70" %>
     </div>
     <div><%= flashcard_set.english_name %></div>
