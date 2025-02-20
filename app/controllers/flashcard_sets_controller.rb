@@ -1,4 +1,5 @@
 class FlashcardSetsController < ApplicationController
+  allow_unauthenticated_access
   layout :resolve_layout
   before_action :set_flashcard_set, only: [:show]
 

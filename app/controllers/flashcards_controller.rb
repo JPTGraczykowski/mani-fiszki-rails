@@ -1,4 +1,5 @@
 class FlashcardsController < ApplicationController
+  allow_unauthenticated_access
   before_action :set_flashcard_set
 
   def index

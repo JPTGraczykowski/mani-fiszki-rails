@@ -1,0 +1,5 @@
+<% password_digest = BCrypt::Password.create("password") %>
+
+admin:
+  email: admin@manifiszki.com
+  password_digest: <%= password_digest %>
