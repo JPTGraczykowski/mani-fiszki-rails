@@ -18,11 +18,11 @@ export default class extends Controller {
     if (this.preferredLanguageValue === "english") {
       this.labelTarget.innerText = "Angielski";
       this.toggleTarget.classList.remove("translate-x-6");
-      this.toggleBackgroundTarget.classList.remove("bg-white")
+      this.toggleBackgroundTarget.classList.remove("bg-lime-200")
     } else {
       this.labelTarget.innerText = "Polski";
       this.toggleTarget.classList.add("translate-x-6");
-      this.toggleBackgroundTarget.classList.add("bg-white")
+      this.toggleBackgroundTarget.classList.add("bg-lime-200")
     }
   }
 }
