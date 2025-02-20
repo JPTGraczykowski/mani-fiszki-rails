@@ -7,5 +7,13 @@
               flashcard_set: @flashcard_set,
               url: admin_flashcard_set_path(@flashcard_set),
               method: :patch %>
+
+    <div class="mb-5 mt-5 flex flex-col items-center">
+      <div class="w-full text-lg">
+        Fiszki w zestawie:
+      </div>
+      <%= render @flashcards %>
+    </div>
+  </div>
   </div>
 </div>

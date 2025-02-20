@@ -11,6 +11,7 @@ class Admin::FlashcardSetsController < Admin::BaseController
   end
 
   def edit
+    @flashcards = @flashcard_set.flashcards
   end
 
   def show
