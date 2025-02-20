@@ -10,4 +10,10 @@ Rails.application.routes.draw do
       get "hide_flashcards", on: :collection
     end
   end
+
+  namespace :admin do
+    resources :flashcard_sets do
+      resources :flashcards, except: [:show]
+    end
+  end
 end
