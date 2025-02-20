@@ -1,0 +1,8 @@
+<div class="mx-auto flex flex-col items-center">
+  <div class="flex w-3/4 flex-col">
+    <%= link_to "< Wróć",
+                admin_flashcard_sets_path,
+                class: "text-lg hover:cursor-pointer hover:opacity-70 w-18 mb-3 border border-gray-300 bg-lime-200 rounded-lg px-1" %>
+    <%= render "form", flashcard_set: @flashcard_set %>
+  </div>
+</div>

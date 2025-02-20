@@ -1,5 +1,7 @@
 class Admin::FlashcardSetsController < Admin::BaseController
+  layout :resolve_layout
   before_action :set_flashcard_set, only: [:edit, :show, :update, :destroy]
+
   def index
     @flashcard_sets = FlashcardSet.all.includes(:flashcards)
   end
@@ -46,5 +48,13 @@ class Admin::FlashcardSetsController < Admin::BaseController
 
   def flashcard_set_params
     params.require(:flashcard_set).permit(:english_name, :polish_name)
+  end
+
+  def resolve_layout
+    if action_name == "index"
+      "application"
+    else
+      "application_with_sidebar"
+    end
   end
 end

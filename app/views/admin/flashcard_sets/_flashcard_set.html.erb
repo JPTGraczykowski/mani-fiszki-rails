@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center text-sm">
     <div class="mb-3 flex text-lg">
       <%= link_to "Edytuj",
-                  flashcard_set,
+                  edit_admin_flashcard_set_path(flashcard_set),
                   class: "text-blue-600 mr-5 hover:opacity-70" %>
       <%= button_to "Usuń",
                     admin_flashcard_set_path(flashcard_set),
