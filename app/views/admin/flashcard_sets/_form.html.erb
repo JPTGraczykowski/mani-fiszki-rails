@@ -1,6 +1,3 @@
-<% url ||= admin_flashcard_sets_path %>
-<% method ||= :post %>
-
 <%= form_with model: flashcard_set, url: url, method: method do |f| %>
   <%= f.text_field :english_name,
                    required: true,

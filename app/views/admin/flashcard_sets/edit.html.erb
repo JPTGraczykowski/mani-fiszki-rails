@@ -9,9 +9,12 @@
               method: :patch %>
 
     <div class="mb-5 mt-5 flex flex-col items-center">
-      <div class="w-full text-lg">
+      <div class="mb-2 w-full text-lg">
         Fiszki w zestawie:
       </div>
+      <%= link_to "+ Dodaj fiszkę",
+                  new_admin_flashcard_set_flashcard_path(@flashcard_set),
+                  class: "text-blue-600 hover:opacity-70 w-full text-left" %>
       <%= render @flashcards %>
     </div>
   </div>

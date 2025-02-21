@@ -1,6 +1,6 @@
 class Admin::FlashcardsController < Admin::BaseController
   before_action :set_flashcard_set
-  before_action :set_flashcard, only: [:edit, :show, :update, :destroy]
+  before_action :set_flashcard, only: [:edit, :update, :destroy]
 
   def index
     @flashcards = @flashcard_set.flashcards
@@ -17,7 +17,7 @@ class Admin::FlashcardsController < Admin::BaseController
     @flashcard = @flashcard_set.flashcards.new(flashcard_params)
 
     if @flashcard.save
-      redirect_to admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę."
+      redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -25,7 +25,7 @@ class Admin::FlashcardsController < Admin::BaseController
 
   def update
     if @flashcard.update(flashcard_params)
-      redirect_to admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę."
+      redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę."
     else
       render :edit, status: :unprocessable_entity
     end
