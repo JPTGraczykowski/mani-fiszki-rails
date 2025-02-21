@@ -1,3 +1,6 @@
+<%= link_to "< Wróć",
+            edit_admin_flashcard_set_path(@flashcard_set),
+            class: "#{back_button_classes}" %>
 <%= render "form",
            flashcard: @flashcard,
            url: admin_flashcard_set_flashcards_path(@flashcard_set),

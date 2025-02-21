@@ -4,7 +4,7 @@
     data-flashcard-english-name-value="<%= @current_flashcard.english_name %>"
     data-flashcard-polish-name-value="<%= @current_flashcard.polish_name %>"
     data-flashcard-language-value="<%= preferred_language %>"
-    class="min-w-44 mb-3 flex h-full w-full items-center justify-center rounded-lg border border-gray-300 bg-lime-50 text-5xl hover:cursor-pointer hover:opacity-70 md:w-3/4"
+    class="min-w-44 mb-3 flex h-full w-full items-center justify-center rounded-lg border border-gray-300 bg-lime-50 text-5xl md:w-3/4 <%= hover_classes %>"
   >
     <span data-flashcard-target="text">
       <%= @current_flashcard.public_send("#{preferred_language}_name") %>

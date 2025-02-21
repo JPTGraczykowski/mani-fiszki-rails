@@ -3,12 +3,12 @@
                    required: true,
                    autofocus: true,
                    placeholder: "Po angielsku...",
-                   class: "block rounded-lg border border-gray-300 focus:outline-gray-600 px-3 py-2 mt-2 w-full bg-white" %>
+                   class: "#{input_classes} mt-2" %>
   <%= f.text_field :polish_name,
                    required: true,
                    autofocus: true,
                    placeholder: "Po polsku...",
-                   class: "block mb-2 rounded-lg border border-gray-300 focus:outline-gray-600 px-3 py-2 mt-2 w-full bg-white" %>
+                   class: "#{input_classes} mt-2 mb-2" %>
   <%= f.submit "Zapisz",
-               class: "rounded-md px-3.5 py-2.5 bg-lime-200 hover:opacity-70 inline-block font-medium cursor-pointer border border-gray-300 w-32" %>
+               class: submit_button_classes %>
 <% end %>

@@ -4,7 +4,7 @@
     <% url = @admin_sidebar ? edit_admin_flashcard_set_path(flashcard_set) : flashcard_set_path(flashcard_set) %>
 
     <%= link_to url do %>
-      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 hover:cursor-pointer hover:opacity-70 <%= active_set ? "border-gray-600 font-medium bg-lime-200" : ""%>">
+      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 <%= hover_classes %> <%= active_set ? "border-gray-600 font-medium bg-lime-200" : ""%>">
         <%= flashcard_set.english_name %>
         (<%= flashcard_set.polish_name %>)
       </div>

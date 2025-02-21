@@ -5,10 +5,10 @@
     <div class="flex w-32 items-center justify-around">
       <%= link_to "Edytuj",
                   edit_admin_flashcard_set_flashcard_path(@flashcard_set, flashcard),
-                  class: "text-blue-600 hover:opacity-70" %>
+                  class: "text-blue-600 #{hover_classes}" %>
       <%= button_to "Usuń",
                     admin_flashcard_set_flashcard_path(@flashcard_set, flashcard),
                     method: :delete,
-                    class: "text-red-600 hover:cursor-pointer hover:opacity-70 mb-3 md:mb-0" %>
+                    class: "text-red-600 mb-3 md:mb-0 #{hover_classes}" %>
     </div>
   </div>

@@ -3,12 +3,12 @@
     <div class="mb-3 flex text-lg">
       <%= link_to "Edytuj",
                   edit_admin_flashcard_set_path(flashcard_set),
-                  class: "text-blue-600 mr-5 hover:opacity-70" %>
+                  class: "text-blue-600 mr-5 #{hover_classes}" %>
       <%= button_to "Usuń",
                     admin_flashcard_set_path(flashcard_set),
                     method: :delete,
                     form: { data: { turbo_confirm: 'Czy na pewno chcesz usunąć zestaw wraz z wszystkimi fiszkami?' } },
-                    class: "text-red-600 hover:cursor-pointer hover:opacity-70" %>
+                    class: "text-red-600 #{hover_classes}" %>
     </div>
     <div><%= flashcard_set.english_name %></div>
     <div>(<%= flashcard_set.polish_name %>)</div>

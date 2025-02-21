@@ -2,7 +2,7 @@
   <div class="flex w-3/4 flex-col">
     <%= link_to "< Wróć",
                 admin_flashcard_sets_path,
-                class: "text-lg hover:cursor-pointer hover:opacity-70 w-18 mb-3 border border-gray-300 bg-lime-200 rounded-lg px-1" %>
+                class: "#{back_button_classes} mb-3" %>
     <%= render "form",
               flashcard_set: @flashcard_set,
               url: admin_flashcard_set_path(@flashcard_set),
@@ -14,7 +14,7 @@
       </div>
       <%= link_to "+ Dodaj fiszkę",
                   new_admin_flashcard_set_flashcard_path(@flashcard_set),
-                  class: "text-blue-600 hover:opacity-70 w-full text-left" %>
+                  class: "text-blue-600 w-full text-left #{hover_classes}" %>
       <%= render @flashcards %>
     </div>
   </div>

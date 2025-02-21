@@ -4,13 +4,13 @@
                     required: true,
                     autofocus: true,
                     placeholder: "Po angielsku...",
-                    class: "block mb-2 mr-1  rounded-lg border border-gray-300 focus:outline-gray-600 px-3 py-2 mt-2 w-full bg-white md:w-1/2 md:mb-0" %>
+                    class: "#{input_classes} mb-2 mr-1 md:w-1/2 md:mb-0" %>
     <%= f.text_field :polish_name,
                     required: true,
                     autofocus: true,
                     placeholder: "Po polsku...",
-                    class: "block mb-2 ml-1 rounded-lg border border-gray-300 focus:outline-gray-600 px-3 py-2 mt-2 w-full bg-white md:w-1/2 mr-1" %>
+                    class: "#{input_classes} mb-2 mr-1 ml-1 md:w-1/2 md:mb-0" %>
     <%= f.submit "Zapisz",
-                class: "rounded-md px-3.5 py-2.5 bg-lime-200 hover:opacity-70 inline-block font-medium cursor-pointer border border-gray-300 w-32 ml-1" %>
+                class: "#{submit_button_classes} ml-1" %>
   </div>
 <% end %>

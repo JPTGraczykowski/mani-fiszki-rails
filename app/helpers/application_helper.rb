@@ -2,4 +2,20 @@ module ApplicationHelper
   def preferred_language
     session[:preferred_language] || "english"
   end
+
+  def hover_classes
+    "hover:cursor-pointer hover:opacity-70"
+  end
+
+  def back_button_classes
+    "w-18 rounded-lg border border-gray-300 bg-lime-200 px-1 text-lg #{hover_classes}"
+  end
+
+  def input_classes
+    "block rounded-lg border border-gray-300 focus:outline-gray-600 px-3 py-2 w-full bg-white"
+  end
+
+  def submit_button_classes
+    "rounded-md px-3.5 py-2 bg-lime-200 inline-block font-medium cursor-pointer border border-gray-300 w-32 #{hover_classes}"
+  end
 end
