@@ -21,7 +21,7 @@ class Admin::FlashcardSetsController < Admin::BaseController
     @flashcard_set = FlashcardSet.new(flashcard_set_params)
 
     if @flashcard_set.save
-      redirect_to admin_flashcard_sets_path, notice: "Pomyślnie zapisano zestaw."
+      redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano zestaw."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Admin::FlashcardSetsController < Admin::BaseController
 
   def update
     if @flashcard_set.update(flashcard_set_params)
-      redirect_to admin_flashcard_sets_path, notice: "Pomyślnie zapisano zestaw."
+      redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano zestaw."
     else
       render :edit, status: :unprocessable_entity
     end
