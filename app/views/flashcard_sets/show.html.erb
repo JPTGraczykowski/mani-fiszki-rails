@@ -10,8 +10,12 @@
       </div>
       <%= render "preferred_language_toggle" %>
     </div>
-    <%= render "flashcard" %>
-    <%= render "navigation" %>
+    <% if @flashcard_set.flashcards.any? %>
+      <%= render "flashcard" %>
+      <%= render "navigation" %>
+    <% else%>
+      <%= render "empty_set_preview" %>
+    <% end %>
   </div>
 <% end %>
-<%= render "show_flashcards_link" %>
+<%= render "show_flashcards_link" if @flashcard_set.flashcards.any? %>
