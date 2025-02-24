@@ -10,8 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_02_20_120251) do
+ActiveRecord::Schema[8.1].define(version: 2025_02_24_125723) do
   create_table "flashcard_sets", force: :cascade do |t|
+    t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.string "english_name", null: false
     t.string "polish_name", null: false

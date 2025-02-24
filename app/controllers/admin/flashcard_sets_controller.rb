@@ -48,7 +48,7 @@ class Admin::FlashcardSetsController < Admin::BaseController
   end
 
   def flashcard_set_params
-    params.require(:flashcard_set).permit(:english_name, :polish_name)
+    params.require(:flashcard_set).permit(:english_name, :polish_name, :active)
   end
 
   def resolve_layout

@@ -1,5 +1,7 @@
+<% flashcard_sets = @admin_sidebar ? FlashcardSet.all : FlashcardSet.active %>
+
 <aside class="border-r-1 hidden w-64 border-gray-300 bg-white px-5 py-5 sm:flex sm:flex-col">
-  <%= FlashcardSet.find_each do |flashcard_set| %>
+  <%= flashcard_sets.find_each do |flashcard_set| %>
     <% active_set = flashcard_set == @flashcard_set %>
     <% url = @admin_sidebar ? edit_admin_flashcard_set_path(flashcard_set) : flashcard_set_path(flashcard_set) %>
 

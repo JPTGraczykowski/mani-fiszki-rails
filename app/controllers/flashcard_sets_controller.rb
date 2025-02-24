@@ -4,7 +4,7 @@ class FlashcardSetsController < ApplicationController
   before_action :set_flashcard_set, only: [:show]
 
   def index
-    @flashcard_sets = FlashcardSet.all
+    @flashcard_sets = FlashcardSet.active
   end
 
   def show

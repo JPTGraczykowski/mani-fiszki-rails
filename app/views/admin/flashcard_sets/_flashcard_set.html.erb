@@ -12,6 +12,11 @@
     </div>
     <div><%= flashcard_set.english_name %></div>
     <div>(<%= flashcard_set.polish_name %>)</div>
+    <% if flashcard_set.active %>
+      <div class="text-green-600">Aktywny</div>
+    <% else %>
+      <div class="text-red-600">Nieaktywny</div>
+    <% end %>
     <%= "Ilość fiszek: #{flashcard_set.flashcards.size}" %>
   </div>
 </div>

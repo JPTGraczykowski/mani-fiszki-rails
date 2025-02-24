@@ -8,7 +8,11 @@
                    required: true,
                    autofocus: true,
                    placeholder: "Po polsku...",
-                   class: "#{input_classes} mt-2 mb-2" %>
+                   class: "#{input_classes} mt-2" %>
+  <div class="flex items-center mt-2 mb-2 <%= hover_classes %>">
+    <%= f.label :active, "Aktywny", class: "mr-2" %>
+    <%= f.check_box :active %>
+  </div>
   <div class="flex items-center">
     <%= link_to "Anuluj",
                 admin_flashcard_sets_path,
