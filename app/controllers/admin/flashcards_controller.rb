@@ -17,7 +17,10 @@ class Admin::FlashcardsController < Admin::BaseController
     @flashcard = @flashcard_set.flashcards.new(flashcard_params)
 
     if @flashcard.save
-      redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę."
+      respond_to do |format|
+        format.html { redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę." }
+        format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano fiszkę." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -25,7 +28,10 @@ class Admin::FlashcardsController < Admin::BaseController
 
   def update
     if @flashcard.update(flashcard_params)
-      redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę."
+      respond_to do |format|
+        format.html { redirect_to edit_admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie zapisano fiszkę." }
+        format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano fiszkę." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,7 +40,10 @@ class Admin::FlashcardsController < Admin::BaseController
   def destroy
     @flashcard.destroy
 
-    redirect_to admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie usunięto fiszkę."
+    respond_to do |format|
+      format.html { redirect_to admin_flashcard_set_path(@flashcard_set), notice: "Pomyślnie usunięto fiszkę." }
+      format.turbo_stream { flash.now[:notice] = "Pomyślnie usunięto fiszkę." }
+    end
   end
 
   private

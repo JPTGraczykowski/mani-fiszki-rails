@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def render_turbo_stream_flash_messages
+    turbo_stream.prepend "flash", partial: "layouts/flash"
+  end
+
   def preferred_language
     session[:preferred_language] || "english"
   end

@@ -22,7 +22,9 @@
   <body class="flex h-screen flex-col font-roboto">
     <%= render "layouts/header" %>
 
-    <%= render "layouts/flash" %>
+    <div id="flash">
+      <%= render "layouts/flash" %>
+    </div>
 
     <main class="flex-1 bg-gray-50 py-5">
       <%= yield %>

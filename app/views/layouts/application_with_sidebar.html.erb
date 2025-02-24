@@ -22,7 +22,9 @@
   <body class="flex h-screen flex-col font-roboto">
     <%= render "layouts/header" %>
 
-    <%= render "layouts/flash" %>
+    <div id="flash">
+      <%= render "layouts/flash" %>
+    </div>
 
     <div class="flex flex-1">
       <%= render "layouts/sidebar" %>
