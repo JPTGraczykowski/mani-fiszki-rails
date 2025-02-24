@@ -1,7 +1,7 @@
 <%= turbo_frame_tag dom_id(flashcard), class: "w-full" do %>
   <div class="mt-2 flex flex-col items-center justify-around md:flex-row">
     <% [flashcard.english_name, flashcard.polish_name].each do |label| %>
-      <div class="mb-2 w-full truncate rounded-lg border border-gray-300 bg-lime-50 px-3 py-2 text-lg md:mb-0 md:mr-2 md:w-1/2"><%= label %></div>
+      <div class="mb-2 w-full truncate rounded-lg border border-gray-300 bg-lime-50 px-3 py-2 text-lg shadow-md md:mb-0 md:mr-2 md:w-1/2"><%= label %></div>
     <% end %>
     <div class="w-30 mb-3 flex items-center justify-around md:mb-0">
       <%= link_to "Edytuj",
