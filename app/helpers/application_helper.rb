@@ -16,6 +16,10 @@ module ApplicationHelper
   end
 
   def submit_button_classes
-    "rounded-md px-3.5 py-2 bg-lime-200 inline-block font-medium cursor-pointer border border-gray-300 w-32 #{hover_classes}"
+    "rounded-md px-3.5 py-2 bg-lime-200 inline-block font-medium cursor-pointer border border-gray-300 text-center #{hover_classes}"
+  end
+
+  def secondary_button_classes
+    "rounded-md px-3.5 py-2 bg-white inline-block font-medium cursor-pointer border border-gray-300 text-center #{hover_classes}"
   end
 end

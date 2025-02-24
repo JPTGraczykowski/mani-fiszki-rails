@@ -1,7 +1,12 @@
 <%= link_to "< Wróć",
             edit_admin_flashcard_set_path(@flashcard_set),
             class: "#{back_button_classes}" %>
-<%= render "form",
-           flashcard: @flashcard,
-           url: admin_flashcard_set_flashcard_path(@flashcard_set, @flashcard),
-           method: :patch %>
+<%= turbo_frame_tag dom_id(@flashcard) do %>
+  <div class="mt-2">
+    <%= render "form",
+              flashcard_set: @flashcard_set,
+              flashcard: @flashcard,
+              url: admin_flashcard_set_flashcard_path(@flashcard_set, @flashcard),
+              method: :patch %>
+  </div>
+<% end %>

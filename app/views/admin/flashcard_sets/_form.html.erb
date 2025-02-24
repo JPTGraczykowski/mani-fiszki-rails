@@ -9,6 +9,11 @@
                    autofocus: true,
                    placeholder: "Po polsku...",
                    class: "#{input_classes} mt-2 mb-2" %>
-  <%= f.submit "Zapisz",
-               class: submit_button_classes %>
+  <div class="flex items-center">
+    <%= link_to "Anuluj",
+                admin_flashcard_sets_path,
+                class: "#{secondary_button_classes} mr-2" %>
+    <%= f.submit "Zapisz",
+                class: "#{submit_button_classes} w-32" %>
+  </div>
 <% end %>
