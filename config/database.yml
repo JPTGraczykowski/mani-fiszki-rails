@@ -25,8 +25,13 @@ test:
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
   primary:
-    <<: *default
-    database: storage/mani-fiszki-production.sqlite3
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    database: mani-fiszki-production
+    user: <%= ENV["DATABASE_USER"] %>
+    password: <%= ENV["DATABASE_PASSWORD"] %>
+    host: <%= ENV["DATABASE_HOST"] %>
   cache:
     <<: *default
     database: storage/mani-fiszki-production_cache.sqlite3
