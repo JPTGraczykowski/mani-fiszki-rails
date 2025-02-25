@@ -1,11 +1,9 @@
 <%= form_with model: flashcard_set, url: url, method: method do |f| %>
   <%= f.text_field :english_name,
-                   required: true,
                    autofocus: true,
                    placeholder: "Po angielsku...",
                    class: "#{input_classes} mt-2" %>
   <%= f.text_field :polish_name,
-                   required: true,
                    autofocus: true,
                    placeholder: "Po polsku...",
                    class: "#{input_classes} mt-2" %>

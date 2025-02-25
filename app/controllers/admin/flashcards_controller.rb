@@ -22,7 +22,7 @@ class Admin::FlashcardsController < Admin::BaseController
         format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano fiszkę." }
       end
     else
-      render :edit, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 

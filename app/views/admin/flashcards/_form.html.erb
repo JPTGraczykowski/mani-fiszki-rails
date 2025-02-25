@@ -1,12 +1,10 @@
 <%= form_with model: flashcard, url: url, method: method do |f| %>
   <div class="flex w-full flex-col items-center justify-around md:flex-row">
     <%= f.text_field :english_name,
-                    required: true,
                     autofocus: true,
                     placeholder: "Po angielsku...",
                     class: "#{input_classes} mb-2 md:mr-2 md:w-1/2 md:mb-0" %>
     <%= f.text_field :polish_name,
-                    required: true,
                     autofocus: true,
                     placeholder: "Po polsku...",
                     class: "#{input_classes} mb-2 md:mr-2 md:w-1/2 md:mb-0" %>
