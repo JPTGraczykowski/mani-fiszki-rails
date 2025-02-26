@@ -18,7 +18,13 @@
                     class: "text-blue-600 w-full text-left #{hover_classes}" %>
       <% end %>
       
-      <%= turbo_frame_tag "flashcard_set_edit_flashcards", class: "w-full" do %>
+      <%= turbo_frame_tag "flashcard_set_edit_flashcards",
+                          data: {
+                            controller: "sortable",
+                            sortable_url_value: admin_flashcard_set_flashcards_path(@flashcard_set),
+                            sortable_param_name_value: "position",
+                          },
+                          class: "w-full" do %>
         <%= render @flashcards %>
       <% end %>
     </div>

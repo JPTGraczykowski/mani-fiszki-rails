@@ -5,15 +5,21 @@
                     placeholder: "Po angielsku...",
                     class: "#{input_classes} mb-2 md:mr-2 md:w-1/2 md:mb-0" %>
     <%= f.text_field :polish_name,
-                    autofocus: true,
                     placeholder: "Po polsku...",
                     class: "#{input_classes} mb-2 md:mr-2 md:w-1/2 md:mb-0" %>
+    <% if render_position_field %>
+      <%= f.number_field :position,
+                        placeholder: "Pozycja...",
+                        in: 1..@max_position,
+                        step: 1,
+                        class: "#{input_classes} mb-2 md:mr-2 md:w-1/2 md:mb-0 md:hidden" %>
+    <% end %>
     <div class="md:w-58 mb-2 flex w-full items-center md:mb-0">
       <%= link_to "Anuluj",
                   edit_admin_flashcard_set_path(flashcard_set),
                   class: "#{secondary_button_classes} w-24 mr-2" %>
       <%= f.submit "Zapisz",
-                  class: "#{submit_button_classes} w-32" %>
+                   class: "#{submit_button_classes} w-32" %>
     </div>
   </div>
 <% end %>

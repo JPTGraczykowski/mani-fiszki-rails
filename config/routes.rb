@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :flashcard_sets do
-      resources :flashcards, except: [:show]
+      resources :flashcards, except: [:show] do
+        patch "reorder", on: :member
+      end
     end
   end
 end

@@ -1,13 +1,14 @@
 class Admin::FlashcardsController < Admin::BaseController
   before_action :set_flashcard_set
-  before_action :set_flashcard, only: [:edit, :update, :destroy]
+  before_action :set_flashcard, only: [:edit, :update, :destroy, :reorder]
+  before_action :set_max_position, only: [:new, :edit]
 
   def index
     @flashcards = @flashcard_set.flashcards
   end
 
   def new
-    @flashcard = @flashcard_set.flashcards.new
+    @flashcard = @flashcard_set.flashcards.new(position: @max_position + 1)
   end
 
   def edit
@@ -46,6 +47,11 @@ class Admin::FlashcardsController < Admin::BaseController
     end
   end
 
+  def reorder
+    @flashcard.insert_at(params[:position].to_i)
+    head :ok
+  end
+
   private
 
   def set_flashcard_set
@@ -56,7 +62,15 @@ class Admin::FlashcardsController < Admin::BaseController
     @flashcard = @flashcard_set.flashcards.find(params[:id])
   end
 
+  def set_max_position
+    @max_position = @flashcard_set.flashcards.size
+  end
+
   def flashcard_params
-    params.require(:flashcard).permit(:english_name, :polish_name)
+    params.require(:flashcard).permit(
+      :english_name,
+      :polish_name,
+      :position
+    )
   end
 end
