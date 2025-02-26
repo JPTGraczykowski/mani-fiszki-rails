@@ -1,13 +1,22 @@
-# fly.toml app configuration file generated for mani-fiszki-rails on 2025-02-25T16:07:30Z
+# fly.toml app configuration file generated for mani-fiszki on 2025-02-26T10:55:44+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'mani-fiszki-rails'
-primary_region = 'waw'
+app = 'mani-fiszki'
+primary_region = 'arn'
 console_command = '/rails/bin/rails console'
 
 [build]
+
+[deploy]
+  release_command = './bin/rails db:prepare'
+
+[env]
+  PORT = '8080'
+
+[processes]
+  app = './bin/rails server'
 
 [http_service]
   internal_port = 8080
@@ -21,4 +30,3 @@ console_command = '/rails/bin/rails console'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
