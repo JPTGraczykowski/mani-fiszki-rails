@@ -1,0 +1,341 @@
+football_1:
+  sentence: football
+  value: I
+  position: 1
+  missing: false
+
+football_2:
+  sentence: football
+  value: like
+  position: 2
+  missing: false
+
+football_3:
+  sentence: football
+  value: to
+  position: 3
+  missing: false
+
+football_4:
+  sentence: football
+  value: play
+  position: 4
+  missing: true
+
+football_5:
+  sentence: football
+  value: football
+  position: 5
+  missing: false
+
+football_6:
+  sentence: football
+  value: with
+  position: 6
+  missing: false
+
+football_7:
+  sentence: football
+  value: my
+  position: 7
+  missing: false
+
+football_8:
+  sentence: football
+  value: friends
+  position: 8
+  missing: false
+
+hiking_1:
+  sentence: hiking
+  value: Hiking
+  position: 1
+  missing: false
+
+hiking_2:
+  sentence: hiking
+  value: in
+  position: 2
+  missing: false
+
+hiking_3:
+  sentence: hiking
+  value: the
+  position: 3
+  missing: false
+
+hiking_4:
+  sentence: hiking
+  value: mountains
+  position: 4
+  missing: false
+
+hiking_5:
+  sentence: hiking
+  value: makes
+  position: 5
+  missing: true
+
+hiking_6:
+  sentence: hiking
+  value: me
+  position: 6
+  missing: false
+
+hiking_7:
+  sentence: hiking
+  value: happy
+  position: 7
+  missing: false
+
+painting_1:
+  sentence: painting
+  value: She
+  position: 1
+  missing: false
+
+painting_2:
+  sentence: painting
+  value: loves
+  position: 2
+  missing: false
+
+painting_3:
+  sentence: painting
+  value: to
+  position: 3
+  missing: false
+
+painting_4:
+  sentence: painting
+  value: paint
+  position: 4
+  missing: false
+
+painting_5:
+  sentence: painting
+  value: pictures
+  position: 5
+  missing: true
+
+painting_6:
+  sentence: painting
+  value: of
+  position: 6
+  missing: false
+
+painting_7:
+  sentence: painting
+  value: flowers
+  position: 7
+  missing: false
+
+hello_1:
+  sentence: hello
+  value: Hello!
+  position: 1
+  missing: false
+
+hello_2:
+  sentence: hello
+  value: How
+  position: 2
+  missing: false
+
+hello_3:
+  sentence: hello
+  value: are
+  position: 3
+  missing: true
+
+hello_4:
+  sentence: hello
+  value: you
+  position: 4
+  missing: false
+
+hello_5:
+  sentence: hello
+  value: today?
+  position: 5
+  missing: false
+
+bye_1:
+  sentence: bye
+  value: Bye!
+  position: 1
+  missing: false
+
+bye_2:
+  sentence: bye
+  value: See
+  position: 2
+  missing: false
+
+bye_3:
+  sentence: bye
+  value: you
+  position: 3
+  missing: false
+
+bye_4:
+  sentence: bye
+  value: tomorrow.
+  position: 4
+  missing: true
+
+thank_you_1:
+  sentence: thank_you
+  value: Thank
+  position: 1
+  missing: false
+
+thank_you_2:
+  sentence: thank_you
+  value: you
+  position: 2
+  missing: false
+
+thank_you_3:
+  sentence: thank_you
+  value: for
+  position: 3
+  missing: false
+
+thank_you_4:
+  sentence: thank_you
+  value: your
+  position: 4
+  missing: true
+
+thank_you_5:
+  sentence: thank_you
+  value: help!
+  position: 5
+  missing: false
+
+policeman_1:
+  sentence: policeman
+  value: A
+  position: 1
+  missing: false
+
+policeman_2:
+  sentence: policeman
+  value: policeman
+  position: 2
+  missing: false
+
+policeman_3:
+  sentence: policeman
+  value: helps
+  position: 3
+  missing: true
+
+policeman_4:
+  sentence: policeman
+  value: people
+  position: 4
+  missing: false
+
+policeman_5:
+  sentence: policeman
+  value: in
+  position: 5
+  missing: false
+
+policeman_6:
+  sentence: policeman
+  value: city
+  position: 6
+  missing: false
+
+policeman_7:
+  sentence: policeman
+  value: the
+  position: 7
+  missing: false
+
+policeman_8:
+  sentence: policeman
+  value: city
+  position: 8
+  missing: false
+
+doctor_1:
+  sentence: doctor
+  value: A
+  position: 1
+  missing: false
+
+doctor_2:
+  sentence: doctor
+  value: doctor
+  position: 2
+  missing: false
+
+doctor_3:
+  sentence: doctor
+  value: takes
+  position: 3
+  missing: false
+
+doctor_4:
+  sentence: doctor
+  value: care
+  position: 4
+  missing: true
+
+doctor_5:
+  sentence: doctor
+  value: of
+  position: 5
+  missing: false
+
+doctor_6:
+  sentence: doctor
+  value: sick
+  position: 6
+  missing: false
+
+doctor_7:
+  sentence: doctor
+  value: people.
+  position: 7
+  missing: false
+
+teacher_1:
+  sentence: teacher
+  value: A
+  position: 1
+  missing: false
+
+teacher_2:
+  sentence: teacher
+  value: teacher
+  position: 2
+  missing: false
+
+teacher_3:
+  sentence: teacher
+  value: teaches
+  position: 3
+  missing: true
+
+teacher_4:
+  sentence: teacher
+  value: children
+  position: 4
+  missing: false
+
+teacher_5:
+  sentence: teacher
+  value: in
+  position: 5
+  missing: false
+
+teacher_6:
+  sentence: teacher
+  value: school.
+  position: 6
+  missing: false

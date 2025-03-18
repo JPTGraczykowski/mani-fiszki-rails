@@ -1,0 +1,143 @@
+football_fake_1:
+  sentence: football
+  value: game
+
+football_fake_2:
+  sentence: football
+  value: make
+
+football_fake_3:
+  sentence: football
+  value: ball
+
+football_fake_4:
+  sentence: football
+  value: go
+
+hiking_fake_1:
+  sentence: hiking
+  value: create
+
+hiking_fake_2:
+  sentence: hiking
+  value: build
+
+hiking_fake_3:
+  sentence: hiking
+  value: forms
+
+hiking_fake_4:
+  sentence: hiking
+  value: does
+
+painting_fake_1:
+  sentence: painting
+  value: drawings
+
+painting_fake_2:
+  sentence: painting
+  value: photos
+
+painting_fake_3:
+  sentence: painting
+  value: frames
+
+painting_fake_4:
+  sentence: painting
+  value: colors
+
+hello_fake_1:
+  sentence: hello
+  value: is
+
+hello_fake_2:
+  sentence: hello
+  value: be
+
+hello_fake_3:
+  sentence: hello
+  value: was
+
+hello_fake_4:
+  sentence: hello
+  value: make
+
+bye_fake_1:
+  sentence: bye
+  value: night
+
+bye_fake_2:
+  sentence: bye
+  value: later
+
+bye_fake_3:
+  sentence: bye
+  value: week
+
+bye_fake_4:
+  sentence: bye
+  value: yesterday
+
+thank_you_fake_1:
+  sentence: thank_you
+  value: my
+
+thank_you_fake_2:
+  sentence: thank_you
+  value: his
+
+thank_you_fake_3:
+  sentence: thank_you
+  value: their
+
+thank_you_fake_4:
+  sentence: thank_you
+  value: our
+
+policeman_fake_1:
+  sentence: policeman
+  value: fights
+
+policeman_fake_2:
+  sentence: policeman
+  value: gives
+
+policeman_fake_3:
+  sentence: policeman
+  value: draws
+
+policeman_fake_4:
+  sentence: policeman
+  value: teaches
+
+doctor_fake_1:
+  sentence: doctor
+  value: help
+
+doctor_fake_2:
+  sentence: doctor
+  value: medicines
+
+doctor_fake_3:
+  sentence: doctor
+  value: health
+
+doctor_fake_4:
+  sentence: doctor
+  value: hospitals
+
+teacher_fake_1:
+  sentence: teacher
+  value: draws
+
+teacher_fake_2:
+  sentence: teacher
+  value: reads
+
+teacher_fake_3:
+  sentence: teacher
+  value: fights
+
+teacher_fake_4:
+  sentence: teacher
+  value: reads

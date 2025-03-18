@@ -1,0 +1,35 @@
+football:
+  sentence_set: hobbies
+  position: 1
+
+hiking:
+  sentence_set: hobbies
+  position: 2
+
+painting:
+  sentence_set: hobbies
+  position: 3
+
+hello:
+  sentence_set: greetings
+  position: 1
+
+bye:
+  sentence_set: greetings
+  position: 2
+
+thank_you:
+  sentence_set: greetings
+  position: 3
+
+policeman:
+  sentence_set: jobs
+  position: 1
+
+doctor:
+  sentence_set: jobs
+  position: 2
+
+teacher:
+  sentence_set: jobs
+  position: 3
