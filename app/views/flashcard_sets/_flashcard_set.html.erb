@@ -1,8 +1,1 @@
-<%= link_to flashcard_set do %>
-  <div class="min-h-32 flex items-center justify-center rounded-lg border shadow-md border-gray-300 bg-lime-50 text-lg <%= hover_classes %>">
-    <div class="flex flex-col items-center">
-      <div><%= flashcard_set.english_name %></div>
-      <div>(<%= flashcard_set.polish_name %>)</div>
-    </div>
-  </div>
-<% end %>
+<%= render "shared/resource_tile", resource: flashcard_set %>
