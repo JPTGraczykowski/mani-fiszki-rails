@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :sentence_sets, only: [:index, :show]
+
   namespace :admin do
     resources :flashcard_sets do
       resources :flashcards, except: [:show] do
