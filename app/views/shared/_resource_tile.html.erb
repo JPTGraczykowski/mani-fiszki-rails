@@ -1,8 +1,9 @@
 <% english_label ||= nil %>
 <% polish_label ||= nil %>
+<% tile_color_class ||= "bg-lime-50" %>
 
 <%= link_to resource do %>
-  <div class="min-h-32 flex items-center justify-center rounded-lg border shadow-md border-gray-300 bg-lime-50 text-lg <%= hover_classes %>">
+  <div class="min-h-32 flex items-center justify-center rounded-lg border shadow-md border-gray-300 text-lg <%= tile_color_class %> <%= hover_classes %>">
     <div class="flex flex-col items-center">
       <div><%= english_label || resource.english_name %></div>
       <div>(<%= polish_label || resource.polish_name  %>)</div>
