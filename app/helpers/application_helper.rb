@@ -15,10 +15,6 @@ module ApplicationHelper
     "hover:cursor-pointer hover:opacity-70"
   end
 
-  def back_button_classes
-    "w-18 rounded-lg border shadow-md border-gray-300 bg-lime-200 px-1 text-lg #{hover_classes}"
-  end
-
   def input_classes
     "block rounded-lg border shadow-md border-gray-300 focus:outline-gray-600 px-3 py-2 w-full bg-white"
   end

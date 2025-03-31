@@ -1,8 +1,6 @@
 <div class="mx-auto flex flex-col items-center">
   <div class="flex w-3/4 flex-col">
-    <%= link_to "< Wróć",
-                admin_flashcard_sets_path,
-                class: "#{back_button_classes} mb-3" %>
+    <%= render "shared/back_button", back_url: admin_flashcard_sets_path, additional_classes: "mb-3" %>
     <%= render "form",
                flashcard_set: @flashcard_set,
                url: admin_flashcard_sets_path,

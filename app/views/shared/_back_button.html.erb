@@ -1,0 +1,6 @@
+<% additional_classes ||= "" %>
+
+<%= link_to "< Wróć",
+            back_url,
+            class: "w-18 rounded-lg border shadow-md border-gray-300 bg-lime-200 px-1 text-lg min-w-18 #{hover_classes} #{additional_classes}",
+            data: { turbo_frame: "_top" } %>
