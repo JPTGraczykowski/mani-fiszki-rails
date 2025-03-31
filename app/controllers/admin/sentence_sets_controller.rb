@@ -66,6 +66,6 @@ class Admin::SentenceSetsController < Admin::BaseController
   def set_sidebar
     @sidebar_resources = SentenceSet.all
     @active_sidebard_resource = @sentence_set
-    @sidebar_resource_path = ->(sentence_set) { admin_sentence_set_path(sentence_set) }
+    @sidebar_resource_path = ->(sentence_set) { edit_admin_sentence_set_path(sentence_set) }
   end
 end

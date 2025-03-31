@@ -1,0 +1,21 @@
+<%= form_with model: sentence_set, url: url, method: method do |f| %>
+  <%= f.text_field :english_name,
+                   autofocus: true,
+                   placeholder: "Po angielsku...",
+                   class: "#{input_classes} mt-2" %>
+  <%= f.text_field :polish_name,
+                   autofocus: true,
+                   placeholder: "Po polsku...",
+                   class: "#{input_classes} mt-2" %>
+  <div class="flex items-center mt-2 mb-2 <%= hover_classes %>">
+    <%= f.label :active, "Aktywny", class: "mr-2" %>
+    <%= f.check_box :active %>
+  </div>
+  <div class="flex items-center">
+    <%= link_to "Anuluj",
+                admin_sentence_sets_path,
+                class: "#{secondary_button_classes} mr-2" %>
+    <%= f.submit "Zapisz",
+                class: "#{submit_button_classes} w-32" %>
+  </div>
+<% end %>

@@ -26,6 +26,10 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :sentence_sets
+    resources :sentence_sets do
+      resources :sentences, except: [:show] do
+        patch "reorder", on: :member
+      end
+    end
   end
 end

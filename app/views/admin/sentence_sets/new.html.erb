@@ -2,7 +2,7 @@
   <div class="flex w-3/4 flex-col">
     <%= render "shared/back_button", back_url: admin_sentence_sets_path, additional_classes: "mb-3" %>
     <%= render "form",
-               flashcard_set: @sentence_set,
+               sentence_set: @sentence_set,
                url: admin_sentence_sets_path,
                method: :post %>
   </div>
