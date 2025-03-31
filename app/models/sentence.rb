@@ -5,6 +5,10 @@ class Sentence < ApplicationRecord
 
   acts_as_list scope: :sentence_set
 
+  def to_s
+    words.pluck(:value).join(" ")
+  end
+
   def missing_word
     words.find_by(missing: true)
   end
