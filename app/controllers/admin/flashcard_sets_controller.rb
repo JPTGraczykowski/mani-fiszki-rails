@@ -1,6 +1,7 @@
 class Admin::FlashcardSetsController < Admin::BaseController
   layout :resolve_layout
   before_action :set_flashcard_set, only: [:edit, :show, :update, :destroy]
+  before_action :set_sidebar, only: [:new, :edit]
 
   def index
     @flashcard_sets = FlashcardSet.all.includes(:flashcards)
@@ -60,5 +61,11 @@ class Admin::FlashcardSetsController < Admin::BaseController
     else
       "application_with_sidebar"
     end
+  end
+
+  def set_sidebar
+    @sidebar_resources = FlashcardSet.all
+    @active_sidebard_resource = @flashcard_set
+    @sidebar_resource_path = ->(flashcard_set) { flashcard_set_path(flashcard_set) }
   end
 end

@@ -1,14 +1,12 @@
-<% flashcard_sets = @admin_sidebar ? FlashcardSet.all : FlashcardSet.active %>
-
 <aside class="border-r-1 hidden w-64 border-gray-300 bg-white px-5 py-5 sm:flex sm:flex-col">
-  <%= flashcard_sets.find_each do |flashcard_set| %>
-    <% active_set = flashcard_set == @flashcard_set %>
-    <% url = @admin_sidebar ? edit_admin_flashcard_set_path(flashcard_set) : flashcard_set_path(flashcard_set) %>
+  <%= @sidebar_resources.find_each do |resource| %>
+    <% active_resource = resource == @active_sidebard_resource %>
+    <% url = @sidebar_resource_path[resource] %>
 
     <%= link_to url do %>
-      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 <%= hover_classes %> <%= active_set ? "border-gray-600 font-medium bg-lime-200" : ""%>">
-        <%= flashcard_set.english_name %>
-        (<%= flashcard_set.polish_name %>)
+      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 <%= hover_classes %> <%= active_resource ? "border-gray-600 font-medium bg-lime-200" : ""%>">
+        <%= resource.english_name %>
+        (<%= resource.polish_name %>)
       </div>
     <% end %>
   <% end %>
