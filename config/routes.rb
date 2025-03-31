@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    get "dashboard" => "dashboard#show"
+
     resources :flashcard_sets do
       resources :flashcards, except: [:show] do
         patch "reorder", on: :member
