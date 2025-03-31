@@ -180,7 +180,7 @@ bye_3:
 
 bye_4:
   sentence: bye
-  value: tomorrow.
+  value: tomorrow
   position: 4
   missing: true
 
@@ -300,7 +300,7 @@ doctor_6:
 
 doctor_7:
   sentence: doctor
-  value: people.
+  value: people
   position: 7
   missing: false
 
@@ -336,6 +336,6 @@ teacher_5:
 
 teacher_6:
   sentence: teacher
-  value: school.
+  value: school
   position: 6
   missing: false

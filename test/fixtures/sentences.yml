@@ -1,35 +1,44 @@
 football:
   sentence_set: hobbies
   position: 1
+  polish_translation: "Lubię grać w piłkę nożną z moimi przyjaciółmi."
 
 hiking:
   sentence_set: hobbies
   position: 2
+  polish_translation: "Wędrowanie po górach sprawia, że jestem szczęśliwa/y."
 
 painting:
   sentence_set: hobbies
   position: 3
+  polish_translation: "Ona kocha malować obrazy kwiatów."
 
 hello:
   sentence_set: greetings
   position: 1
+  polish_translation: "Cześć! Jak się masz dzisiaj?"
 
 bye:
   sentence_set: greetings
   position: 2
+  polish_translation: "Pa! Do zobaczenia jutro."
 
 thank_you:
   sentence_set: greetings
   position: 3
+  polish_translation: "Dziękuję ci za twoją pomoc!"
 
 policeman:
   sentence_set: jobs
   position: 1
+  polish_translation: "Policjant pomaga ludziom w mieście."
 
 doctor:
   sentence_set: jobs
   position: 2
+  polish_translation: "Doktor opiekuje się chorymi ludźmi."
 
 teacher:
   sentence_set: jobs
   position: 3
+  polish_translation: "Nauczyciel uczy dzieci w szkole."

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_03_18_084824) do
+ActiveRecord::Schema[8.1].define(version: 2025_03_31_113813) do
   create_table "fake_words", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "sentence_id", null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_03_18_084824) do
 
   create_table "sentences", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.text "polish_translation", default: ""
     t.integer "position"
     t.integer "sentence_set_id", null: false
     t.datetime "updated_at", null: false
