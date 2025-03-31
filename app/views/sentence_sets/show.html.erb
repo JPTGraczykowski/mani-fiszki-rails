@@ -1,4 +1,4 @@
-<div class="h-5/8 mx-auto flex flex-col items-center sm:h-3/4">
+<div class="mx-auto mb-3 flex flex-col items-center">
   <div class="mb-2 flex w-full flex-col items-center justify-between px-1 sm:flex-row md:w-3/4">
     <%= render "shared/back_button", back_url: sentence_sets_path %>
     <div class="w-full text-center text-xl">
@@ -12,3 +12,4 @@
     <%= render "shared/empty_set_preview" %>
   <% end %>
 </div>
+<%= render "show_sentence_translation_link" %>

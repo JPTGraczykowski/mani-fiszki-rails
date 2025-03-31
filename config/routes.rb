@@ -11,7 +11,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :sentence_sets, only: [:index, :show]
+  resources :sentence_sets, only: [:index, :show] do
+    resources :sentences, only: [:show] do
+      get "hide_translation", on: :member
+    end
+  end
 
   namespace :admin do
     resources :flashcard_sets do

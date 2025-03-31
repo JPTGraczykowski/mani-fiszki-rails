@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "sentence_translation" do %>
+  <div class="mx-auto mb-5 mt-3 flex flex-col items-center md:w-3/4">
+    <%= link_to "Ukryj tłumaczenie",
+                hide_translation_sentence_set_sentence_path(@sentence_set, @current_sentence),
+                class: "mt-2 text-lg bg-lime-200 border border-gray-300 rounded-lg px-2 #{hover_classes}",
+                data: { turbo_frame: "sentence_translation" } %>
+    <div class="mt-3">Tłumaczenie zadania</div>
+  </div>
+<% end %>

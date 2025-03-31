@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "sentence_translation" do %>
+  <div class="mx-auto mt-3 flex flex-1 flex-col items-center md:w-3/4">
+    <%= link_to "Pokaż tłumaczenie",
+              sentence_set_sentence_path(@sentence_set, @current_sentence),
+              class: "mt-2 text-lg bg-lime-200 border shadow-md border-gray-300 rounded-lg px-2 #{hover_classes}" %>
+  </div>
+<% end %>
