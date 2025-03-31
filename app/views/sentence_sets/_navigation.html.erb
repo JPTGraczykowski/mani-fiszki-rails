@@ -1,0 +1,16 @@
+<div class="min-w-44 flex w-3/4 items-center justify-center">
+  <% nav_link_class = "flex h-8 w-16 items-center justify-center rounded-lg border shadow-md border-gray-300 bg-lime-200 #{hover_classes}" %>
+  <% if @current_index > 0 %>
+    <%= link_to "<", sentence_set_path(@sentence_set, index: @current_index - 1), class: nav_link_class %>
+  <% else %>
+    <div class="w-16"></div>
+  <% end %>
+  <div class="mx-3 h-8 w-16 text-center text-xl">
+    <%= "#{@current_index + 1} / #{@sentences.size}" %>
+  </div>
+  <% if @current_index < @sentences.size - 1 %>
+    <%= link_to ">", sentence_set_path(@sentence_set, index: @current_index + 1), class: nav_link_class %>
+  <% else %>
+    <div class="w-16"></div>
+  <% end %>
+</div>

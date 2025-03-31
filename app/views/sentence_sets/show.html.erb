@@ -4,6 +4,11 @@
     <div class="w-full text-center text-xl">
       <%= "#{@sentence_set.english_name} (#{@sentence_set.polish_name})" %>
     </div>
-    <%= render "shared/preferred_language_toggle" %>
   </div>
+  <% if @sentence_set.sentences.any? %>
+    <%= render "sentence" %>
+    <%= render "navigation" %>
+  <% else %>
+    <%= render "shared/empty_set_preview" %>
+  <% end %>
 </div>

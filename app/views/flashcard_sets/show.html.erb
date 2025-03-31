@@ -10,8 +10,8 @@
     <% if @flashcard_set.flashcards.any? %>
       <%= render "flashcard" %>
       <%= render "navigation" %>
-    <% else%>
-      <%= render "empty_set_preview" %>
+    <% else %>
+      <%= render "shared/empty_set_preview" %>
     <% end %>
   </div>
 <% end %>
