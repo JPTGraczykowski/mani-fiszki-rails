@@ -66,6 +66,6 @@ class Admin::FlashcardSetsController < Admin::BaseController
   def set_sidebar
     @sidebar_resources = FlashcardSet.all
     @active_sidebard_resource = @flashcard_set
-    @sidebar_resource_path = ->(flashcard_set) { flashcard_set_path(flashcard_set) }
+    @sidebar_resource_path = ->(flashcard_set) { edit_admin_flashcard_set_path(flashcard_set) }
   end
 end

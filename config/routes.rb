@@ -25,5 +25,7 @@ Rails.application.routes.draw do
         patch "reorder", on: :member
       end
     end
+
+    resources :sentence_sets
   end
 end

@@ -1,0 +1,22 @@
+<div class="min-h-32 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 text-lg shadow-md">
+  <div class="flex flex-col items-center text-sm">
+    <div class="mb-3 flex text-lg">
+      <%= link_to "Edytuj",
+                  edit_admin_sentence_set_path(sentence_set),
+                  class: "text-blue-600 mr-5 #{hover_classes}" %>
+      <%= button_to "Usuń",
+                    admin_sentence_set_path(sentence_set),
+                    method: :delete,
+                    form: { data: { turbo_confirm: 'Czy na pewno chcesz usunąć zestaw wraz z wszystkimi zdaniami?' } },
+                    class: "text-red-600 #{hover_classes}" %>
+    </div>
+    <div><%= sentence_set.english_name %></div>
+    <div>(<%= sentence_set.polish_name %>)</div>
+    <% if sentence_set.active %>
+      <div class="text-green-600">Aktywny</div>
+    <% else %>
+      <div class="text-red-600">Nieaktywny</div>
+    <% end %>
+    <%= "Ilość zdań: #{sentence_set.sentences.size}" %>
+  </div>
+</div>
