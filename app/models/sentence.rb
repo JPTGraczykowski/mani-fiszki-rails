@@ -4,4 +4,8 @@ class Sentence < ApplicationRecord
   has_many :fake_words, dependent: :destroy
 
   acts_as_list scope: :sentence_set
+
+  def missing_word
+    words.find_by(missing: true)
+  end
 end

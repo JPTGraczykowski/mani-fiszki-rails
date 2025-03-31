@@ -1,8 +1,8 @@
-<div class="min-w-44 mb-3 mt-3 flex w-full items-center justify-center">
+<div class="mb-2 mt-3 flex w-full flex-wrap items-center justify-center">
   <% @current_sentence.words.each do |word| %>
-    <div class="mx-1 rounded-lg border border-gray-300 px-5 py-3 text-2xl shadow-md <%= word.missing? ? "bg-orange-100" : "bg-lime-50" %>">
+    <div class="mx-1 mb-1 rounded-lg border border-gray-300 px-5 py-3 text-2xl shadow-md <%= word.missing? ? "bg-blue-100" : "bg-lime-50" %>">
       <% if word.missing? %>
-        <div id="missing-word">.........</div>
+        <div id="word-gap">.........</div>
       <% else %>
         <%= word.value %>
       <% end %>
@@ -10,11 +10,18 @@
   <% end %>
 </div>
 <div class="mb-1 mt-3 text-xl">Wybierz właściwe słowo:</div>
-<div class="mb-3 flex w-full items-center justify-center">
-  <% words_to_choose = [*@current_sentence.fake_words, @current_sentence.words.find_by(missing: true)].shuffle %>
-  <% words_to_choose.each do |fake_word| %>
-    <div class="mx-1 rounded-lg border border-gray-300 bg-lime-50 px-5 py-3 text-2xl shadow-md <%= hover_classes %>">
-      <%= fake_word.value %>
+<div class="mb-2 flex w-full flex-wrap items-center justify-center">
+  <% words_to_choose = [*@current_sentence.fake_words, @current_sentence.missing_word].shuffle %>
+  <% words_to_choose.each do |word_to_choose| %>
+    <div
+      data-controller="sentence"
+      data-sentence-missing-word-id-value="<%= @current_sentence.missing_word.id %>"
+      data-action="click->sentence#selectWord"
+      data-word-id="<%= word_to_choose.id %>"
+      data-word-value="<%= word_to_choose.value %>"
+      class="word-to-choose mx-1 mb-1 rounded-lg border border-gray-300 bg-lime-50 px-5 py-3 text-2xl shadow-md <%= hover_classes %>"
+    >
+      <%= word_to_choose.value %>
     </div>
   <% end %>
 </div>
