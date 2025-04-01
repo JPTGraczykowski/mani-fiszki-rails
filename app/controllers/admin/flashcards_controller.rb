@@ -23,6 +23,7 @@ class Admin::FlashcardsController < Admin::BaseController
         format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano fiszkę." }
       end
     else
+      flash.now[:alert] = "Nie udało się zapisać fiszki."
       render :new, status: :unprocessable_entity
     end
   end
@@ -34,6 +35,7 @@ class Admin::FlashcardsController < Admin::BaseController
         format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano fiszkę." }
       end
     else
+      flash.now[:alert] = "Nie udało się zapisać fiszki."
       render :edit, status: :unprocessable_entity
     end
   end
