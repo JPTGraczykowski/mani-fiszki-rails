@@ -1,0 +1,6 @@
+<%= turbo_stream.append "sentence_set_edit_sentences", @sentence %>
+<%= turbo_stream.update Sentence.new,
+                        link_to("+ Dodaj zdanie",
+                                new_admin_sentence_set_sentence_path(@sentence_set),
+                                class: "text-blue-600 w-full text-left #{hover_classes}") %>
+<%= render_turbo_stream_flash_messages %>

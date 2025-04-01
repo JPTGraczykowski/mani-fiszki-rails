@@ -6,4 +6,8 @@ class Word < ApplicationRecord
   validates :value, presence: true
 
   scope :visible, -> { where(missing: false) }
+
+  def to_s
+    value
+  end
 end

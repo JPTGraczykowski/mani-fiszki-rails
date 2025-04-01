@@ -1,7 +1,7 @@
 class Admin::SentencesController < Admin::BaseController
   before_action :set_sentence_set
   before_action :set_sentence, only: [:edit, :update, :destroy, :reorder]
-  before_action :set_max_position, only: [:new, :edit]
+  before_action :set_max_position, only: [:new, :edit, :create, :update]
 
   def index
     @sentences = @sentence_set.sentences
@@ -15,25 +15,33 @@ class Admin::SentencesController < Admin::BaseController
   end
 
   def create
-    @sentence = @sentence_set.sentences.new(sentence_params)
+    @sentence = @sentence_set.sentences.new
 
-    if @sentence.save
+    service = ::SentenceServices::Save.new(sentence: @sentence, sentence_params: sentence_params)
+    service.call
+
+    if service.succeeded
       respond_to do |format|
         format.html { redirect_to edit_admin_sentence_set_path(@sentence_set), notice: "Pomyślnie zapisano zdanie." }
         format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano zdanie." }
       end
     else
+      flash.now[:alert] = "Nie udało się zapisać zdania: #{service.error_message}"
       render :new, status: :unprocessable_entity
     end
   end
 
   def update
-    if @sentence.update(sentence_params)
+    service = ::SentenceServices::Save.new(sentence: @sentence, sentence_params: sentence_params)
+    service.call
+
+    if service.succeeded
       respond_to do |format|
         format.html { redirect_to edit_admin_sentence_set_path(@sentence_set), notice: "Pomyślnie zapisano zdanie." }
         format.turbo_stream { flash.now[:notice] = "Pomyślnie zapisano zdanie." }
       end
     else
+      flash.now[:alert] = "Nie udało się zapisać zdania: #{service.error_message}"
       render :edit, status: :unprocessable_entity
     end
   end
@@ -67,6 +75,12 @@ class Admin::SentencesController < Admin::BaseController
   end
 
   def sentence_params
-    params.require(:sentence).permit(:translation, :position)
+    params.require(:sentence).permit(
+      :sentence_text,
+      :missing_word,
+      :fake_words_text,
+      :polish_translation,
+      :position
+    )
   end
 end

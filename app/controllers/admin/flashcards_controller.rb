@@ -1,7 +1,7 @@
 class Admin::FlashcardsController < Admin::BaseController
   before_action :set_flashcard_set
   before_action :set_flashcard, only: [:edit, :update, :destroy, :reorder]
-  before_action :set_max_position, only: [:new, :edit]
+  before_action :set_max_position, only: [:new, :edit, :create, :update]
 
   def index
     @flashcards = @flashcard_set.flashcards

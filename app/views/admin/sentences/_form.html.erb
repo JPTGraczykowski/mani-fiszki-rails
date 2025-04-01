@@ -1,0 +1,34 @@
+<%= form_with model: sentence, url: url, method: method do |f| %>
+  <div class="flex w-full flex-col items-center justify-around">
+    <%= f.text_field :sentence_text,
+                     value: sentence.to_s,
+                     autofocus: true,
+                     placeholder: "Treść zdania...",
+                     class: "#{input_classes} mb-2" %>
+    <%= f.text_field :missing_word,
+                     value: sentence.missing_word,
+                     placeholder: "Brakujace słowo...",
+                     class: "#{input_classes} mb-2" %>
+    <%= f.text_field :fake_words_text,
+                     value: sentence.fake_words.pluck(:value).join(" "),
+                     placeholder: "Nieprawdziwe słowa...",
+                     class: "#{input_classes} mb-2" %>
+    <%= f.text_field :polish_translation,
+                     placeholder: "Po polsku...",
+                     class: "#{input_classes} mb-2" %>
+    <% if render_position_field %>
+      <%= f.number_field :position,
+                        placeholder: "Pozycja...",
+                        in: 1..@max_position,
+                        step: 1,
+                        class: "#{input_classes} mb-2 md:hidden" %>
+    <% end %>
+    <div class="md:w-58 mb-2 flex w-full items-center md:mb-0">
+      <%= link_to "Anuluj",
+                  edit_admin_sentence_set_path(sentence_set),
+                  class: "#{secondary_button_classes} w-24 mr-2" %>
+      <%= f.submit "Zapisz",
+                   class: "#{submit_button_classes} w-32" %>
+    </div>
+  </div>
+<% end %>

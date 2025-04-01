@@ -1,0 +1,10 @@
+<% next_sentence = @sentence_set.sentences.find_by(position: @sentence.position + 1) %>
+
+<% if next_sentence %>
+  <%= turbo_stream.remove @sentence %>
+  <%= turbo_stream.before dom_id(next_sentence), @sentence %>
+<% else %>
+  <%= turbo_stream.replace @sentence %>
+<% end %>
+
+<%= render_turbo_stream_flash_messages %>

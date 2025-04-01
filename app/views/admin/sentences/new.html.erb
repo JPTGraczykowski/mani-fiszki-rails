@@ -1,0 +1,9 @@
+<%= render "shared/back_button", back_url: edit_admin_sentence_set_path(@sentence_set) %>
+<%= turbo_frame_tag dom_id(@sentence) do %>
+  <%= render "form",
+             sentence_set: @sentence_set,
+             sentence: @sentence,
+             url: admin_sentence_set_sentences_path(@sentence_set),
+             method: :post,
+             render_position_field: false %>
+<% end %>
