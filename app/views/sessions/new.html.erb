@@ -1,26 +1,32 @@
-<div class="mx-auto w-3/4 md:w-1/3">
-  <h1 class="text-2xl">Zaloguj się</h1>
+<div class="mx-auto max-w-md px-6 py-12">
+  <div class="mb-5 text-center">
+    <h1 class="text-3xl font-bold text-gray-800">Zaloguj się</h1>
+  </div>
 
-  <%= form_with url: session_url, class: "contents" do |form| %>
-    <div class="my-5">
-      <%= form.email_field :email,
+  <div class="overflow-hidden rounded-xl bg-white p-8 shadow-lg">
+    <%= form_with url: session_url, class: "space-y-6" do |form| %>
+      <div>
+        <label for="email" class="mb-2 block text-sm font-medium text-gray-700">Adres e-mail</label>
+        <%= form.email_field :email,
                            autofocus: true,
                            placeholder: "Wprowadź swój adres e-mail",
                            value: params[:email],
-                           class: input_classes %>
-    </div>
-    <div class="my-5">
-      <%= form.password_field :password,
+                           class: "#{input_classes} w-full" %>
+      </div>
+      
+      <div>
+        <label for="password" class="mb-2 block text-sm font-medium text-gray-700">Hasło</label>
+        <%= form.password_field :password,
                               autocomplete: "current-password",
                               placeholder: "Wprowadź swoje hasło",
                               maxlength: 72,
-                              class: input_classes %>
-    </div>
-    <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-      <div class="inline">
-        <%= form.submit "Zaloguj",
-                        class: "#{submit_button_classes} w-32" %>
+                              class: "#{input_classes} w-full" %>
       </div>
-    </div>
-  <% end %>
+      
+      <div class="pt-2">
+        <%= form.submit "Zaloguj",
+                      class: "#{submit_button_classes} w-full py-3 text-center text-base font-medium" %>
+      </div>
+    <% end %>
+  </div>
 </div>
