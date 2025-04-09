@@ -2,17 +2,24 @@
   <div class="h-5/8 mx-auto flex flex-col items-center sm:h-3/4">
     <div class="mb-2 flex w-full flex-col items-center justify-between px-1 sm:flex-row md:w-3/4">
       <%= render "shared/back_button", back_url: flashcard_sets_path %>
-      <div class="w-full text-center text-xl">
-        <%= "#{@flashcard_set.english_name} (#{@flashcard_set.polish_name})" %>
-      </div>
+      <h1 class="w-full text-center text-2xl font-bold text-gray-800">
+        <%= @flashcard_set.english_name %> 
+        <span class="text-2xl text-gray-500">(<%= @flashcard_set.polish_name %>)</span>
+      </h1>
       <%= render "shared/preferred_language_toggle" %>
     </div>
+    
     <% if @flashcard_set.flashcards.any? %>
-      <%= render "flashcard" %>
-      <%= render "navigation" %>
+        <%= render "flashcard" %>
+        <%= render "navigation" %>
     <% else %>
       <%= render "shared/empty_set_preview" %>
     <% end %>
   </div>
 <% end %>
-<%= render "show_flashcards_link" if @flashcard_set.flashcards.any? %>
+
+<% if @flashcard_set.flashcards.any? %>
+  <div class="mt-8 text-center">
+    <%= render "show_flashcards_link" %>
+  </div>
+<% end %>

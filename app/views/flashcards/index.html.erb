@@ -1,8 +1,8 @@
 <%= turbo_frame_tag "flashcards" do %>
-  <div class="mx-auto mb-5 mt-3 flex flex-col items-center md:w-3/4">
+  <div class="mx-auto mb-5 flex flex-1 flex-col items-center md:w-3/4">
     <%= link_to "Ukryj słówka w tym zestawie",
                 hide_flashcards_flashcard_set_flashcards_path,
-                class: "mt-2 text-lg bg-lime-200 border border-gray-300 rounded-lg px-2 #{hover_classes}",
+                class: "mb-3 inline-flex items-center rounded-lg bg-lime-200 px-4 py-2 text-lg font-medium shadow-md #{hover_classes}",
                 data: { turbo_frame: "flashcards" } %>
     <%= render @flashcards %>
   </div>
