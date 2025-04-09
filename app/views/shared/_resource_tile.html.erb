@@ -5,7 +5,7 @@
 <%= link_to resource_url, class: "block transition-transform duration-300 hover:scale-105" do %>
   <div class="min-h-48 flex flex-col items-center justify-center rounded-xl border border-gray-200 p-6 shadow-lg <%= tile_color_class %>">
     <div class="flex flex-col items-center text-center">
-      <div class="mb-2 text-2xl font-bold text-gray-800"><%= english_label || resource.english_name %></div>
+      <div class="mb-2 text-xl font-bold text-gray-800"><%= english_label || resource.english_name %></div>
       <div class="text-lg text-gray-600">(<%= polish_label || resource.polish_name %>)</div>
     </div>
   </div>
