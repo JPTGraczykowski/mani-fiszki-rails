@@ -1,14 +1,16 @@
-<div class="container mx-auto grid w-3/4 grid-cols-1 gap-4 sm:w-1/2">
-  <%= render "shared/resource_tile",
-             resource: FlashcardSet,
-             resource_url: flashcard_sets_path,
-             english_label: "Flashcards",
-             polish_label: "Fiszki",
-             tile_color_class: "bg-blue-100" %>
-  <%= render "shared/resource_tile",
-             resource: SentenceSet,
-             resource_url: sentence_sets_path,
-             english_label: "Sentences",
-             polish_label: "Zdania",
-             tile_color_class: "bg-orange-100" %>
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:mx-auto lg:w-3/4">
+    <%= render "shared/resource_tile",
+              resource: FlashcardSet,
+              resource_url: flashcard_sets_path,
+              english_label: "Flashcards",
+              polish_label: "Fiszki",
+              tile_color_class: "bg-gradient-to-br from-blue-100 to-blue-300" %>
+    <%= render "shared/resource_tile",
+              resource: SentenceSet,
+              resource_url: sentence_sets_path,
+              english_label: "Sentences",
+              polish_label: "Zdania",
+              tile_color_class: "bg-gradient-to-br from-orange-100 to-orange-300" %>
+  </div>
 </div>

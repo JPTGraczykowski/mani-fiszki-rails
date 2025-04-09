@@ -1,6 +1,10 @@
 <% additional_classes ||= "" %>
 
-<%= link_to "< Wróć",
-            back_url,
-            class: "w-18 rounded-lg border shadow-md border-gray-300 bg-lime-200 px-1 text-lg min-w-18 #{hover_classes} #{additional_classes}",
-            data: { turbo_frame: "_top" } %>
+<%= link_to back_url, 
+            class: "flex items-center rounded-lg bg-lime-200 px-4 py-2 shadow-sm transition-all duration-200 hover:shadow-md #{hover_classes} #{additional_classes}",
+            data: { turbo_frame: "_top" } do %>
+  <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+  </svg>
+  <span>Wróć</span>
+<% end %>
