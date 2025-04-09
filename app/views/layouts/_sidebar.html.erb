@@ -1,13 +1,20 @@
-<aside class="border-r-1 hidden w-64 border-gray-300 bg-white px-5 py-5 sm:flex sm:flex-col">
-  <%= @sidebar_resources.find_each do |resource| %>
-    <% active_resource = resource == @active_sidebard_resource %>
-    <% url = @sidebar_resource_path[resource] %>
+<aside class="hidden w-64 border-r border-gray-200 bg-white px-4 py-6 shadow-sm sm:flex sm:flex-col">
+  <div class="space-y-2">
+    <%= @sidebar_resources.find_each do |resource| %>
+      <% active_resource = resource == @active_sidebard_resource %>
+      <% url = @sidebar_resource_path[resource] %>
 
-    <%= link_to url do %>
-      <div class="min-h-8 my-1 flex items-center justify-center rounded-lg border border-gray-300 bg-lime-50 <%= hover_classes %> <%= active_resource ? "border-gray-600 font-medium bg-lime-200" : ""%>">
-        <%= resource.english_name %>
-        (<%= resource.polish_name %>)
-      </div>
+      <%= link_to url, class: "block w-full" do %>
+        <div class="flex items-center rounded-lg px-3 py-2 text-sm <%= active_resource ? 'bg-lime-100 text-lime-700 font-medium' : 'text-gray-700 hover:bg-lime-50' %>">
+          <% if active_resource %>
+            <span class="mr-2 h-1.5 w-1.5 rounded-full bg-lime-700"></span>
+          <% end %>
+          <div>
+            <div class="font-medium"><%= resource.english_name %></div>
+            <div class="text-xs text-gray-500"><%= resource.polish_name %></div>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </aside>
