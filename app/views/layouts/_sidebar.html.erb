@@ -5,13 +5,13 @@
       <% url = @sidebar_resource_path[resource] %>
 
       <%= link_to url, class: "block w-full" do %>
-        <div class="flex items-center rounded-lg px-3 py-2 text-sm <%= active_resource ? 'bg-lime-100 text-lime-700 font-medium' : 'text-gray-700 hover:bg-lime-50' %>">
+        <div class="flex items-center rounded-lg px-3 py-2 text-md <%= active_resource ? 'bg-lime-100 text-lime-700' : 'text-gray-700 hover:bg-lime-50' %>">
           <% if active_resource %>
             <span class="mr-2 h-1.5 w-1.5 rounded-full bg-lime-700"></span>
           <% end %>
           <div>
-            <div class="font-medium"><%= resource.english_name %></div>
-            <div class="text-xs text-gray-500"><%= resource.polish_name %></div>
+            <div class="text-md"><%= resource.english_name %></div>
+            <div class="text-sm text-gray-500"><%= resource.polish_name %></div>
           </div>
         </div>
       <% end %>
