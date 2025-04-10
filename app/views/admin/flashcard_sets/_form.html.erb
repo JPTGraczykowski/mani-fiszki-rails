@@ -1,21 +1,33 @@
-<%= form_with model: flashcard_set, url: url, method: method do |f| %>
-  <%= f.text_field :english_name,
-                   autofocus: true,
-                   placeholder: "Po angielsku...",
-                   class: "#{input_classes} mt-2" %>
-  <%= f.text_field :polish_name,
-                   autofocus: true,
-                   placeholder: "Po polsku...",
-                   class: "#{input_classes} mt-2" %>
-  <div class="flex items-center mt-2 mb-2 <%= hover_classes %>">
-    <%= f.label :active, "Aktywny", class: "mr-2" %>
-    <%= f.check_box :active %>
+<%= form_with model: flashcard_set, url: url, method: method, class: "space-y-4" do |f| %>
+  <div>
+    <label for="english_name" class="mb-1 block text-sm font-medium text-gray-700">Nazwa angielska</label>
+    <%= f.text_field :english_name,
+                    autofocus: true,
+                    placeholder: "Po angielsku...",
+                    class: "#{input_classes} w-full" %>
   </div>
+  
+  <div>
+    <label for="polish_name" class="mb-1 block text-sm font-medium text-gray-700">Nazwa polska</label>
+    <%= f.text_field :polish_name,
+                    placeholder: "Po polsku...",
+                    class: "#{input_classes} w-full" %>
+  </div>
+  
   <div class="flex items-center">
+    <div class="relative mr-2 inline-block w-10 select-none align-middle">
+      <%= f.check_box :active, 
+                      class: "absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer checked:right-0 checked:border-lime-500" %>
+      <label for="flashcard_set_active" class="block h-6 cursor-pointer overflow-hidden rounded-full bg-gray-300"></label>
+    </div>
+    <%= f.label :active, "Aktywny", class: "text-sm font-medium text-gray-700" %>
+  </div>
+  
+  <div class="flex items-center justify-end space-x-3 pt-4">
     <%= link_to "Anuluj",
                 admin_flashcard_sets_path,
-                class: "#{secondary_button_classes} mr-2" %>
+                class: "#{secondary_button_classes}" %>
     <%= f.submit "Zapisz",
-                class: "#{submit_button_classes} w-32" %>
+                class: "#{submit_button_classes}" %>
   </div>
 <% end %>

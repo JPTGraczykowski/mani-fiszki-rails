@@ -1,9 +1,15 @@
-<div class="mx-auto flex flex-col items-center">
-  <div class="flex w-3/4 flex-col">
-    <%= render "shared/back_button", back_url: admin_sentence_sets_path, additional_classes: "mb-3" %>
-    <%= render "form",
-               sentence_set: @sentence_set,
-               url: admin_sentence_sets_path,
-               method: :post %>
+<div class="container mx-auto flex flex-col items-center px-4 py-6">
+  <div class="w-full md:w-3/4">
+    <div class="mb-6 flex items-center">
+      <%= render "shared/back_button", back_url: admin_sentence_sets_path %>
+      <h1 class="ml-4 text-2xl font-bold text-gray-800">Nowy zestaw zdań</h1>
+    </div>
+
+    <div class="rounded-xl bg-white p-6 shadow-md">
+      <%= render "form",
+                sentence_set: @sentence_set,
+                url: admin_sentence_sets_path,
+                method: :post %>
+    </div>
   </div>
 </div>

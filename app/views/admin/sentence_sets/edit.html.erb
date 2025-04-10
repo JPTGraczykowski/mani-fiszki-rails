@@ -1,31 +1,43 @@
-<div class="mx-auto flex flex-col items-center">
-  <div class="flex w-3/4 flex-col">
-    <%= render "shared/back_button", back_url: admin_sentence_sets_path, additional_classes: "mb-3" %>
-    <%= render "form",
-              sentence_set: @sentence_set,
-              url: admin_sentence_set_path(@sentence_set),
-              method: :patch %>
+<div class="container mx-auto flex flex-col items-center px-4 py-6">
+  <div class="w-full md:w-3/4">
+    <div class="mb-6 flex items-center">
+      <%= render "shared/back_button", back_url: admin_sentence_sets_path %>
+      <h1 class="ml-4 text-2xl font-bold text-gray-800">
+        Edytuj zestaw: <%= @sentence_set.english_name %> <span class="text-gray-600">(<%= @sentence_set.polish_name %>)</span>
+      </h1>
+    </div>
 
-    <div class="mb-5 mt-5 flex flex-col items-center">
-      <div class="mb-2 w-full text-lg">
-        Zdania w zestawie:
-      </div>
-      <%= turbo_frame_tag dom_id(Sentence.new), class: "w-full" do %>
-        <%= link_to "+ Dodaj zdanie",
-                    new_admin_sentence_set_sentence_path(@sentence_set),
-                    class: "text-blue-600 w-full text-left #{hover_classes}" %>
+    <div class="mb-8 rounded-xl bg-white p-6 shadow-md">
+      <%= render "form",
+                sentence_set: @sentence_set,
+                url: admin_sentence_set_path(@sentence_set),
+                method: :patch %>
+    </div>
+
+    <div class="rounded-xl bg-white p-6 shadow-md">
+      <h2 class="mb-4 text-xl font-bold text-gray-800">Zdania w zestawie</h2>
+      
+      <%= turbo_frame_tag dom_id(Sentence.new), class: "block w-full" do %>
+        <%= link_to new_admin_sentence_set_sentence_path(@sentence_set),
+                    class: "mb-4 inline-flex items-center rounded-lg bg-blue-50 px-4 py-2 font-medium text-blue-700 #{hover_classes}" do %>
+          <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+          </svg>
+          Dodaj zdanie
+        <% end %>
       <% end %>
       
-      <%= turbo_frame_tag "sentence_set_edit_sentences",
-                          data: {
-                            controller: "sortable",
-                            sortable_url_value: admin_sentence_set_sentences_path(@sentence_set),
-                            sortable_param_name_value: "position",
-                          },
-                          class: "w-full" do %>
-        <%= render @sentences %>
-      <% end %>
+      <div class="mt-4">
+        <%= turbo_frame_tag "sentence_set_edit_sentences",
+                            data: {
+                              controller: "sortable",
+                              sortable_url_value: admin_sentence_set_sentences_path(@sentence_set),
+                              sortable_param_name_value: "position",
+                            },
+                            class: "w-full" do %>
+          <%= render @sentences %>
+        <% end %>
+      </div>
     </div>
-  </div>
   </div>
 </div>
