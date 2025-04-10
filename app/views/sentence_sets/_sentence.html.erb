@@ -1,6 +1,6 @@
 <div class="mb-2 mt-3 flex w-full flex-wrap items-center justify-center">
   <% @current_sentence.words.each do |word| %>
-    <div class="mx-1 mb-1 rounded-lg border border-gray-300 px-5 py-3 text-2xl shadow-md <%= word.missing? ? "bg-blue-100" : "bg-lime-50" %>">
+    <div class="mx-1 mb-1 rounded-lg border border-gray-300 px-5 py-3 text-2xl shadow-lg <%= word.missing? ? "bg-blue-100" : "bg-lime-50" %>">
       <% if word.missing? %>
         <div id="word-gap">.........</div>
       <% else %>

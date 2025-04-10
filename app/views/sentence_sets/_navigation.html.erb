@@ -1,16 +1,36 @@
-<div class="min-w-44 flex w-3/4 items-center justify-center">
-  <% nav_link_class = "flex h-8 w-16 items-center justify-center rounded-lg border shadow-md border-gray-300 bg-lime-200 #{hover_classes}" %>
+<div class="min-w-44 flex w-3/4 items-center justify-between">
+  <% nav_link_class = "flex h-12 w-12 items-center justify-center rounded-full bg-lime-200 text-xl font-bold shadow-md #{hover_classes}" %>
+  <% nav_link_disabled_class = "flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-xl font-bold text-gray-400" %>
+  
   <% if @current_index > 0 %>
-    <%= link_to "<", sentence_set_path(@sentence_set, index: @current_index - 1), class: nav_link_class %>
+    <%= link_to sentence_set_path(@sentence_set, index: @current_index - 1), class: nav_link_class do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    <% end %>
   <% else %>
-    <div class="w-16"></div>
+    <div class="<%= nav_link_disabled_class %>">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </div>
   <% end %>
-  <div class="mx-3 h-8 w-16 text-center text-xl">
+  
+  <div class="w-32 rounded-lg bg-lime-200 px-4 py-2 text-center text-lg font-medium shadow-md">
     <%= "#{@current_index + 1} / #{@sentences.size}" %>
   </div>
+  
   <% if @current_index < @sentences.size - 1 %>
-    <%= link_to ">", sentence_set_path(@sentence_set, index: @current_index + 1), class: nav_link_class %>
+    <%= link_to sentence_set_path(@sentence_set, index: @current_index + 1), class: nav_link_class do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    <% end %>
   <% else %>
-    <div class="w-16"></div>
+    <div class="<%= nav_link_disabled_class %>">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
   <% end %>
 </div>

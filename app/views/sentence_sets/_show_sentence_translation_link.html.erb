@@ -1,7 +1,15 @@
 <%= turbo_frame_tag "sentence_translation" do %>
-  <div class="mx-auto mt-3 flex flex-1 flex-col items-center md:w-3/4">
-    <%= link_to "Pokaż tłumaczenie",
-              sentence_set_sentence_path(@sentence_set, @current_sentence),
-              class: "mt-2 text-lg bg-lime-200 border shadow-md border-gray-300 rounded-lg px-2 #{hover_classes}" %>
+  <div class="mx-auto mt-3 flex flex-1 flex-col items-center">
+    <%= link_to sentence_set_sentence_path(@sentence_set, @current_sentence),
+                class: "inline-flex items-center rounded-lg bg-lime-200 px-4 py-2 text-lg font-medium shadow-md #{hover_classes}" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        <path d="M18 8l-4 4 4 4"></path>
+        <path d="M6 16l4-4-4-4"></path>
+      </svg>
+      Pokaż tłumaczenie
+    <% end %>
   </div>
 <% end %>
