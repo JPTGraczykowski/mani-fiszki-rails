@@ -43,6 +43,108 @@ horse:
   polish_name: Kon
   position: 3
 
+bird:
+  flashcard_set: animals
+  english_name: Bird
+  polish_name: Ptak
+  position: 4
+
+fish:
+  flashcard_set: animals
+  english_name: Fish
+  polish_name: Ryba
+  position: 5
+
+snake:
+  flashcard_set: animals
+  english_name: Snake
+  polish_name: Wąż
+  position: 6
+
+tiger:
+  flashcard_set: animals
+  english_name: Tiger
+  polish_name: Tygrys
+  position: 7
+
+lion:
+  flashcard_set: animals
+  english_name: Lion
+  polish_name: Lew
+  position: 8
+
+elephant:
+  flashcard_set: animals
+  english_name: Elephant
+  polish_name: Słoń
+  position: 9
+
+zebra:
+  flashcard_set: animals
+  english_name: Zebra
+  polish_name: Zebra
+  position: 10
+
+cow:
+  flashcard_set: animals
+  english_name: Cow
+  polish_name: Krowa
+  position: 11
+
+sheep:
+  flashcard_set: animals
+  english_name: Sheep
+  polish_name: Owca
+  position: 12
+
+pig:
+  flashcard_set: animals
+  english_name: Pig
+  polish_name: Świnia
+  position: 13
+
+rabbit:
+  flashcard_set: animals
+  english_name: Rabbit
+  polish_name: Królik
+  position: 14
+
+fox:
+  flashcard_set: animals
+  english_name: Fox
+  polish_name: Lis
+  position: 15
+
+bear:
+  flashcard_set: animals
+  english_name: Bear
+  polish_name: Niedźwiedź
+  position: 16
+
+wolf:
+  flashcard_set: animals
+  english_name: Wolf
+  polish_name: Wilk
+  position: 17
+
+monkey:
+  flashcard_set: animals
+  english_name: Monkey
+  polish_name: Małpa
+  position: 18
+
+giraffe:
+  flashcard_set: animals
+  english_name: Giraffe
+  polish_name: Żyrafa
+  position: 19
+
+hippo:
+  flashcard_set: animals
+  english_name: Hippo
+  polish_name: Hipopotam
+  position: 20
+
 monday:
   flashcard_set: weekdays
   english_name: Monday
