@@ -23,5 +23,56 @@ The app follows a one-teacher, multiple-students model. A single user (a teacher
 Students can access the app without any restrictions and use it to learn English.
 
 ![Mani Fiszki Image 4](/app/assets/images/mf-4.png)
-![Mani Fiszki Image 5](/app/assets/images/mf-5.png)
-![Mani Fiszki Image 6](/app/assets/images/mf-6.png)
+
+
+## Tech stack
+
+- **Ruby**: 3.3.x
+- **Rails**: 8 (edge, from `rails/rails` main)
+- **Hotwire**: Turbo + Stimulus
+- **Asset bundling**: Importmap (no Node.js required)
+- **CSS**: Tailwind CSS (`tailwindcss-rails`)
+- **Persistence**: SQLite3 (development/test), PostgreSQL (production)
+
+## Local development
+
+### Prerequisites
+
+- Ruby 3.3.x
+
+### Setup
+
+```bash
+bundle install
+```
+
+### Run the app
+
+Option A (recommended): single command with Foreman
+
+```bash
+bin/dev         # runs Rails server and tailwind watcher
+```
+
+Option B: run processes separately
+
+```bash
+bin/rails server
+bin/rails tailwindcss:watch
+```
+
+Visit `http://localhost:3000`.
+
+### Database commands
+
+```bash
+bin/rails db:create
+bin/rails db:migrate
+bin/rails db:seed
+```
+
+### Tests
+
+```bash
+bin/rails test
+```
